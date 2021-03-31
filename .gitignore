@@ -1,0 +1,8 @@
+out/
+odometry/data/
+yolo/data/
+__pycache__/
+odometry/__pycache__/
+odometry/data/
+yolo/__pycache__/
+segmentation/__pycache__/
