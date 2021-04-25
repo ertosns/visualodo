@@ -180,7 +180,7 @@ def filter_detections_by_segmentation(detections, segmentation_output):
 
             TP = sum(sum(cropped_canvas))
             iou =  TP/area
-            print('TP: {}, area: {}, iou: {}'.format(TP, area, iou))
+            #print('TP: {}, area: {}, iou: {}'.format(TP, area, iou))
             if iou>0.3:
                 filtered_detections+=[detection]
     return filtered_detections
@@ -211,9 +211,9 @@ def find_min_distance_to_detection(detections, x, y, z):
         x1, y1, x2, y2, score = np.asfarray(nums)
         x1_idx,x2_idx,y1_idx,y2_idx=int(y1),int(y2),int(x1),int(x2)
         cropped_distance=distance[x1_idx:x2_idx,y1_idx:y2_idx]
-        print('detection: {}, detection distance: {}'.format(detection, cropped_distance))
+        #print('detection: {}, detection distance: {}'.format(detection, cropped_distance))
         min_dist=np.min(cropped_distance)
-        print('min_dist: {}'.format(min_dist))
+        #print('min_dist: {}'.format(min_dist))
         #assert(min_dist-0.1>0)
         min_distances+=[min_dist]
     return min_distances

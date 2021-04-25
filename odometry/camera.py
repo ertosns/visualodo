@@ -12,7 +12,7 @@ class Camera:
 
 class FileCamera(Camera):
     def __init__(self, p, dataset_dir):
-        print('p: {}'.format(type(p)))
+        #print('p: {}'.format(type(p)))
         #print('len: {}'.format(len(p)))
         super().__init__(p)
         self.dir=dataset_dir
